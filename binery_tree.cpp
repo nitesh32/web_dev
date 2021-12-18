@@ -9,15 +9,11 @@ bool iseven(int n){return ((n&1)==0)?true:false;}
 int pov(int n,int m){ int c=1;  while(m>0){  if(!iseven(m)){ c=c*n; } n=n*n; m=m>>1;  }  return c; }
 unsigned int intlen(unsigned int n){return n ? intlen(n/10)+1 : 0;}
 bool isprime(int x) { for (int d = 2; d * d <= x; d++) { if (x % d == 0) return false; }return true; }
-struct node{
-    int data;
-    
-};
 int main(){
 #ifndef ONLINE_JUDGE
 freopen("ipt.txt","r",stdin);
 freopen("out.txt","w",stdout);
 #endif
-   
+    cout<<2<<endl<<3;
 return 0;
 }
