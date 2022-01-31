@@ -1,9 +1,9 @@
-enter data : enter data for the left of : 2
+enter data : enter data for the left of : 1
 enter data : enter data for the left of : 2
 enter data : enter data for the right of : 2
 enter data : enter data for the left of : 4
 enter data : enter data for the right of : 4
-enter data : enter data for the right of : 2
+enter data : enter data for the right of : 1
 enter data : enter data for the left of : 3
 enter data : enter data for the left of : 5
 enter data : enter data for the left of : 7
@@ -14,20 +14,28 @@ enter data : enter data for the left of : 6
 enter data : enter data for the left of : 8
 enter data : enter data for the right of : 8
 enter data : enter data for the right of : 6
-enter data : enter data for the left of : 11
-enter data : enter data for the right of : 11
+enter data : enter data for the left of : 9
+enter data : enter data for the right of : 9
 enter data : 
 preorder -> 
-2 2 4 3 5 7 6 8 11 
+1 2 4 3 5 7 6 8 9 
 postorder -> 
-4 2 7 5 8 11 6 3 2 
+4 2 7 5 8 9 6 3 1 
 inorder -> 
-2 4 2 7 5 3 8 6 11 
+2 4 1 7 5 3 8 6 9 
 height of your binery tree -> 
 4
 size of your binery tree -> 
 9
 maximum in your binery tree -> 
-11
+9
 minimum in your binery tree -> 
-2
+1
+level order traversal 
+level 1 has elements : 1 
+level 2 has elements : 2 3 
+level 3 has elements : 4 5 6 
+level 4 has elements : 7 8 9 
+
+level order traversal by queue 
+1 2 3 4 5 6 7 8 9 

@@ -1,4 +1,5 @@
 #include<iostream> 
+#include <queue> 
 using namespace std; 
 struct node{ 
     int data; 
@@ -54,6 +55,39 @@ int min_ele(struct node *root){
     if(root == NULL){ return INT_MAX; } 
     return min(root->data,min(max_ele(root->left),max_ele(root->right))); 
 } 
+void lv(struct node *root,int lavel){
+    if(root ==NULL){
+        return ;
+    }
+    if(lavel==1){
+        cout<<root->data<<" ";
+    }
+    else if(lavel > 1){
+        lv(root->left,lavel-1);
+        lv(root->right,lavel-1);
+    }
+    
+}
+void lq(struct node *root){
+   queue<struct node *> l;
+   if(root!=NULL){
+       l.push(root);
+   }
+   while(!l.empty()){
+       struct node *curr;
+       curr = l.front();
+       cout<<curr->data<<" ";
+       if(curr->left!=NULL){
+           l.push(curr->left);
+       }
+       if(curr->right!=NULL){
+           l.push(curr->right);
+       }
+       l.pop();
+   }
+
+
+}
 int main(){ 
 #ifndef ONLINE_JUDGE 
 freopen("ipt.txt","r",stdin); 
@@ -67,13 +101,23 @@ freopen("out.txt","w",stdout);
     cout<<endl<<"inorder -> "<<endl; 
     printInorder(root); 
     cout<<endl<<"height of your binery tree -> "<<endl; 
-    cout<<height(root); 
+    int h =height(root); 
+    cout<<h;
     cout<<endl<<"size of your binery tree -> "<<endl; 
     cout<<size(root); 
     cout<<endl<<"maximum in your binery tree -> "<<endl; 
     cout<<max_ele(root); 
     cout<<endl<<"minimum in your binery tree -> "<<endl; 
     cout<<min_ele(root);
-     // level order traversal we need to study 
+    // level order traversal O(n)2 ->
+    cout<<endl<<"level order traversal "<<endl;
+    for(int i=1;i<=h;i++){
+        cout<<"level "<<i<<" has elements : ";
+        lv(root,i);
+        cout<<endl;
+    }
+    //level order traversal O(n) ->
+    cout<<endl<<"level order traversal by queue "<<endl;
+    lq(root);
     return 0; 
 }
