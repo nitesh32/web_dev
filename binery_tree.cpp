@@ -76,6 +76,7 @@ void lq(struct node *root){
    while(!l.empty()){
        struct node *curr;
        curr = l.front();
+       
        cout<<curr->data<<" ";
        if(curr->left!=NULL){
            l.push(curr->left);
@@ -121,3 +122,6 @@ freopen("out.txt","w",stdout);
     lq(root);
     return 0; 
 }
+// need to check min_ele function 
+// need to do map of level order traversal 
+// need more in anuj
