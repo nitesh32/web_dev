@@ -1,2 +1,33 @@
+enter data : enter data for the left of : 2
+enter data : enter data for the left of : 2
+enter data : enter data for the right of : 2
+enter data : enter data for the left of : 4
+enter data : enter data for the right of : 4
+enter data : enter data for the right of : 2
+enter data : enter data for the left of : 3
+enter data : enter data for the left of : 5
+enter data : enter data for the left of : 7
+enter data : enter data for the right of : 7
+enter data : enter data for the right of : 5
+enter data : enter data for the right of : 3
+enter data : enter data for the left of : 6
+enter data : enter data for the left of : 8
+enter data : enter data for the right of : 8
+enter data : enter data for the right of : 6
+enter data : enter data for the left of : 11
+enter data : enter data for the right of : 11
+enter data : 
+preorder -> 
+2 2 4 3 5 7 6 8 11 
+postorder -> 
+4 2 7 5 8 11 6 3 2 
+inorder -> 
+2 4 2 7 5 3 8 6 11 
+height of your binery tree -> 
+4
+size of your binery tree -> 
+9
+maximum in your binery tree -> 
+11
+minimum in your binery tree -> 
 2
-3
