@@ -14,6 +14,16 @@ int main(){
 freopen("ipt.txt","r",stdin);
 freopen("out.txt","w",stdout);
 #endif
-    
+    ll t;
+    cin>>t;
+    while(t--){
+        cin>>n;
+        if(n%7==0){
+            cout<<n<<endl;
+        }
+        else{
+            cout<<(n-(n%7))<<endl;
+        }
+    }
 return 0;
 }

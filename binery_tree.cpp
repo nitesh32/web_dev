@@ -51,10 +51,6 @@ int max_ele(struct node *root){
     if(root == NULL){ return INT_MIN; } 
     return max(root->data,max(max_ele(root->left),max_ele(root->right))); 
 } 
-int min_ele(struct node *root){ 
-    if(root == NULL){ return INT_MAX; } 
-    return min(root->data,min(max_ele(root->left),max_ele(root->right))); 
-} 
 void lv(struct node *root,int lavel){
     if(root ==NULL){
         return ;
@@ -90,10 +86,10 @@ void lq(struct node *root){
 
 }
 int main(){ 
-#ifndef ONLINE_JUDGE 
-freopen("ipt.txt","r",stdin); 
-freopen("out.txt","w",stdout); 
-#endif 
+// #ifndef ONLINE_JUDGE 
+// freopen("ipt.txt","r",stdin); 
+// freopen("out.txt","w",stdout); 
+// #endif 
     struct node *root= create(); 
     cout<<endl; cout<<"preorder -> "<<endl; 
     printPreorder(root); cout<<endl; 
@@ -108,8 +104,6 @@ freopen("out.txt","w",stdout);
     cout<<size(root); 
     cout<<endl<<"maximum in your binery tree -> "<<endl; 
     cout<<max_ele(root); 
-    cout<<endl<<"minimum in your binery tree -> "<<endl; 
-    cout<<min_ele(root);
     // level order traversal O(n)2 ->
     cout<<endl<<"level order traversal "<<endl;
     for(int i=1;i<=h;i++){
@@ -122,6 +116,3 @@ freopen("out.txt","w",stdout);
     lq(root);
     return 0; 
 }
-// need to check min_ele function 
-// need to do map of level order traversal 
-// need more in anuj
